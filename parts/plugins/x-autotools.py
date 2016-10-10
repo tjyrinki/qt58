@@ -122,7 +122,7 @@ class AutotoolsPlugin(snapcraft.BasePlugin):
 
 #        configure_command.append('-prefix $SNAP -bindir $SNAP/usr/bin -release -confirm-license -opensource -plugin-sql-mysql -plugin-sql-odbc -plugin-sql-psql -plugin-sql-sqlite -no-sql-sqlite2 -plugin-sql-tds -system-sqlite -platform linux-g++-64 -system-harfbuzz -system-zlib -system-libpng -system-libjpeg -openssl -no-rpath -verbose -optimized-qmake -dbus-linked -strip -qpa xcb -xcb -glib -icu -accessibility -no-compile-examples -no-directfb -gstreamer 1.0 -opengl desktop -nomake examples -nomake tests -skip qtquick1 -skip qtwayland -skip qtwebengine -skip qtwebview -skip qtwebkit -skip qtwebkit-examples')
 
-        self.run(configure_command + self.options.configflags)
+        self.run(configure_command + ['-prefix', self.installdir] + self.options.configflags)
         self.run(['make', '-j{}'.format(self.parallel_build_count)])
         self.run(make_install_command)
 

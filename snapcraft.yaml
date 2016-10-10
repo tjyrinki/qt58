@@ -1,5 +1,5 @@
 name: qt57
-version: '5.7.0~test'
+version: '5.7.1~test'
 summary: Upstream Qt to be compiled as part of your project
 description: |
   Qt is a cross-platform C++ application framework. Qt's primary feature
@@ -77,10 +77,10 @@ parts:
                - zlib1g-dev
 # config flags: for arm64, -opengl es2 platform linux-g++
     configflags:
-        - -prefix
-        - $SNAP
-        - -bindir
-        - $SNAP/usr/bin
+#        - -prefix
+#        - $SNAP
+#        - -bindir
+#        - $SNAP/usr/bin
         - -release
 #        - -libdir $SNAP/lib
 #        - -docdir $SNAP/doc
