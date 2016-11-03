@@ -1,5 +1,5 @@
-name: qt57
-version: '5.7.1~test'
+name: qt58
+version: '5.8.0~snapshot'
 summary: Upstream Qt to be compiled as part of your project
 description: |
   Qt is a cross-platform C++ application framework. Qt's primary feature
@@ -10,11 +10,11 @@ grade: stable
 confinement: strict
 
 parts:
-  qt57:
+  qt58:
     plugin: autotools
     source-type: git
     source: https://code.qt.io/qt/qt5.git
-    source-branch: 5.7.1
+    source-branch: "5.8"
 # From deb packaging build deps
     build-packages:
                - g++
