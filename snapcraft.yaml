@@ -147,6 +147,7 @@ parts:
         - qtwebkit-examples
 # currently tailored from ubuntu 16.04 package names (mostly libpng etc may vary)
     stage-packages:
+        - etc1tool # minimal package for depending on libpng regardless of Ubuntu version
         - fontconfig
         - icu-devtools
         - libc6
@@ -169,7 +170,6 @@ parts:
         - libjpeg8
         - libmtdev1
         - libpcre16-3
-        - libpng-tools
         - libproxy1v5
         - libsm6
         - libsqlite3-0
